@@ -1,0 +1,37 @@
+sampling_params:
+  temperature: 0
+  top_p: 0.95
+  n_answer_sampled: 1 
+  stop_token_ids_for_glm: [151329, 151336, 151338]
+  random_seed: 2024
+model_params:
+  max_model_len: 131072  # 128k context length
+  gpu_memory_utilization: 0.95
+  trust_remote_code: true
+  enable_chunked_prefill: false
+  enforce_eager: true
+  dtype: bfloat16
+  models_port:
+    glm-4-9b-chat-1m: 7000
+    Llama-3-8B-ProLong-512k-Base: 7001
+    Llama-3-8B-ProLong-512k-Instruct: 7002
+    Llama-3.1-8B-Instruct: 7003
+    Llama-3.1-8B: 7004
+    Llama-3.1-70B-Instruct: 7005
+    Llama-3.1-70B: 7006
+    Llama-3.2-1B-Instruct: 7007
+    Llama-3.2-1B: 7008
+    Llama-3.2-3B-Instruct: 7009
+    Llama-3.2-3B: 7010
+    Mistral-Nemo-Instruct-2407: 7011
+    Mistral-Nemo-base-2407: 7012
+    Phi-3-medium-128k-instruct: 7013
+    Phi-3-small-128k-instruct: 7014
+    Phi-3.5-mini-instruct: 7015
+    Qwen2.5-7B-Instruct: 7016
+    Qwen2.5-7B: 7017
+    Qwen2.5-72B-Instruct:  7018
+    Qwen2.5-72B: 7019
+    Qwen2.5-7B-Instruct-1M: 7020
+    Qwen2.5-14B-Instruct-1M: 7021
+    internlm3-8b-instruct: 7022

@@ -1,0 +1,38 @@
+{
+  "simple_paraphrases": [
+    "<This person> enjoys <hobby> as a hobby.",
+    "One of <This person>'s hobbies is <hobby>.",
+    "Engaging in <hobby> is a favorite pastime for <This person-o>.",
+    "<This person>'s favorite activity is <hobby>.",
+    "<This person> finds joy in <hobby> as a hobby.",
+    "<This person> has a keen interest in <hobby>.",
+    "<This person> often does <hobby> for fun.",
+    "As a hobby, <This person> participates in <hobby>.",
+    "<This person> takes up <hobby> as a regular hobby.",
+    "A hobby for <This person-o> is <hobby>.",
+    "For <This person-o>, <hobby> is a personal interest.",
+    "<This person> is interested in <hobby> as a pastime.",
+    "<This person> enjoys <hobby> in their free time.",
+    "<This person> finds <hobby> to be an enjoyable hobby.",
+    "<This person> is fond of <hobby>.",
+    "<This person-o> has an enduring enthusiasm for <hobby> as a hobby."
+  ],
+  "complicated_paraphrases": [
+    "<This person> has cultivated a strong interest in <hobby> over time.",
+    "<This person> expresses their creativity and passion through the hobby of <hobby>.",
+    "<This person> has made a habit of engaging in <hobby> during their downtime.",
+    "With a deep-seated enthusiasm, <This person> regularly engages in <hobby>.",
+    "As a form of relaxation, <This person> turns to <hobby> as a cherished hobby.",
+    "<This person> consistently pursues <hobby>, finding great pleasure in the activity.",
+    "Having embraced <hobby> as a personal interest, <This person> enjoys it frequently.",
+    "<This person> has nurtured a love for <hobby>, making it a core aspect of their hobbies.",
+    "For <This person-o>, <hobby> represents both relaxation and enjoyment during downtime.",
+    "<This person> has invested much time and effort into <hobby>, making it a central hobby.",
+    "Engaging in <hobby> provides <This person-o> with a fulfilling outlet for their interests.",
+    "<This person> incorporates <hobby> into their routine as a productive pastime.",
+    "Taking up <hobby> as an interest has allowed <This person-o> to explore new areas of the life.",
+    "With a consistent dedication to <hobby>, <This person> finds it to be a rewarding hobby.",
+    "Over time, <This person> has developed a significant interest in <hobby> as a form of relaxation.",
+    "For <This person-o>, indulging in <hobby> is a preferred way to unwind and enjoy their free time."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "simple_paraphrases": [
+    "<This person> worked in the city of <work_city>.",
+    "<This person> had a job in city: <work_city>.",
+    "<This person> has worked in the city of <work_city>.",
+    "<This person> acquired job experience in the city of <work_city>.",
+    "<This person> did work in the city of <work_city>.",
+    "<This person> spent time working in the city of <work_city>.",
+    "<This person> held a job in the city of <work_city>.",
+    "<This person> worked at a location in city: <work_city>.",
+    "<This person> obtained work experience in <work_city> city.",
+    "<This person> was employed in <work_city> city.",
+    "<This person> was based in <work_city> city for work.",
+    "<This person> gained experience through work in the city of <work_city>.",
+    "<This person> built up work experience in the city of <work_city>.",
+    "<This person> engaged in work in <work_city> city.",
+    "<This person> developed skills by working in the city of <work_city>.",
+    "<This person> got professional experience in the city of <work_city>.",
+    "<This person> spent a period working in <work_city> city.",
+    "<This person> pursued career responsibilities in the city of <work_city>.",
+    "<This person> was employed at a job in the city of <work_city>.",
+    "<This person> served in a job capacity located in <work_city> city."
+  ],
+  "complicated_paraphrases": [
+    "<This person> accumulated substantial work experience while employed in the city of <work_city>.",
+    "<This person> garnered valuable expertise by working in the city of <work_city>.",
+    "<This person> expanded their professional portfolio with career experience gained in city: <work_city>.",
+    "<This person> amassed significant on-the-job experience during their time in <work_city> city.",
+    "<This person> advanced their career by accumulating work experience in <work_city> city.",
+    "<This person> enriched their professional development through work undertaken in <work_city> city.",
+    "<This person> obtained crucial work experience through employment in the city of <work_city>.",
+    "<This person> enhanced their vocational skills by working in the city of <work_city>.",
+    "<This person> bolstered their professional background by gaining work exposure in the city of <work_city>.",
+    "<This person> deepened their industry experience while being professionally active in the city of <work_city>.",
+    "<This person> diversified their career by gaining experience in various roles in <work_city> city.",
+    "<This person> refined their professional capabilities through work experience in <work_city> city.",
+    "<This person> increased their industry-specific experience by working in city: <work_city>.",
+    "<This person> enriched their skill set with professional experience acquired in the city of <work_city>.",
+    "<This person> strengthened their career foundation through extensive work experience in the city of <work_city>.",
+    "<This person> engaged in professional endeavors that greatly added to their experience in <work_city> city.",
+    "<This person> built a solid foundation of professional experience by working in the city of <work_city>."
+  ]
+}

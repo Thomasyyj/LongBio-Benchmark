@@ -1,0 +1,42 @@
+{
+  "simple_paraphrases": [
+    "<This person> graduated from <university>.",
+    "<This person> completed their graduation from <university>.",
+    "<This person> earned a degree from <university>.",
+    "<This person> finished their studies at <university>.",
+    "<This person> is a graduate of <university>.",
+    "<This person> obtained their degree at <university>.",
+    "<This person> successfully graduated from <university>.",
+    "<This person> completed their education at <university>.",
+    "<This person> has a degree from <university>.",
+    "<This person> has completed their degree at <university>.",
+    "<This person> has graduated from <university>.",
+    "<This person> obtained their diploma from <university>.",
+    "<This person> concluded their studies at <university>.",
+    "<This person> is an alumnus of <university>.",
+    "<This person> got their degree at <university>.",
+    "<This person> successfully completed their education at <university>.",
+    "<This person> finished their degree at <university>.",
+    "<This person> holds a degree from <university>."
+  ],
+  "complicated_paraphrases": [
+    "<This person> successfully concluded their academic journey at <university>.",
+    "<This person> achieved academic qualification through <university>.",
+    "<This person> progressed through the entire academic program at <university>.",
+    "<This person> was awarded their degree by <university> upon completion of their studies.",
+    "<This person> culminated their educational pursuit at <university> with a graduation.",
+    "<This person> obtained formal recognition of their degree from <university> after completing all requirements.",
+    "<This person> finalized their academic program at <university> and received their degree.",
+    "<This person> completed their academic endeavors at <university> and was granted a degree.",
+    "<This person> achieved their academic credentials at <university> upon finishing their program.",
+    "<This person> earned their academic qualifications from <university>, marking the end of their studies.",
+    "<This person> fulfilled the academic requirements and received their diploma from <university>.",
+    "<This person> successfully completed all their academic obligations at <university> and graduated.",
+    "<This person> successfully completed their scholarly efforts at <university>, culminating in graduation.",
+    "<This person> brought their academic tenure to a successful conclusion at <university> and graduated.",
+    "<This person> attained their academic degree from <university> following the successful completion of their program.",
+    "<This person> saw the completion of their academic journey at <university> with the awarding of a degree.",
+    "<This person> achieved their formal education at <university>, marking the successful conclusion of their studies.",
+    "<This person> was officially recognized as a graduate by <university> after completing all academic requirements."
+  ]
+}

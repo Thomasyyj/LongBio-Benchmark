@@ -1,0 +1,27 @@
+{
+  "simple_paraphrases": [
+    "<This person> was born on the date of <birthdate>.",
+    "The birthdate of <This person-o> is <birthdate>.",
+    "On <birthdate>, <This person> was born.",
+    "<This person> was given birth to on <birthdate>.",
+    "It was <birthdate> when <This person> was born.",
+    "The birthday of <This person-o> is <birthdate>.",
+    "On the day of <birthdate>, <This person> was born.",
+    "<This person> was born on <birthdate>.",
+    "<This person> was born on the day of <birthdate>.",
+    "The day <This person> was born is <birthdate>.",
+    "It was on <birthdate> that <This person> was born.",
+    "<This person>'s birth occurred on <birthdate>.",
+    "<This person>'s birth took place on <birthdate>.",
+    "<birthdate> is the day of <This person>'s birth.",
+    "On <birthdate>, <This person> was born."
+  ],
+  "complicated_paraphrases": [
+    "The exact date of <This person>'s birth is recorded as <birthdate>.",
+    "<This person> was brought forth into life on the date of <birthdate>.",
+    "The arrival of <This person-o> into the world occurred on <birthdate>.",
+    "The birth event of <This person-o> is dated as <birthdate>.",
+    "According to records, <This person> was born on <birthdate>.",
+    "<This person> was first introduced to life's journey on <birthdate>."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "simple_paraphrases": [
+    "<This person> hails from <birthplace>.",
+    "<This person> came into the world at <birthplace>.",
+    "<This person> was born at <birthplace>.",
+    "The birthplace of <This person-o> is <birthplace>.",
+    "<birthplace> is where <This person> was born.",
+    "<birthplace> is the city where <This person> was born.",
+    "<This person> entered life in <birthplace>.",
+    "<This person> entered the world in <birthplace>.",
+    "<This person> came into the world at <birthplace>.",
+    "<This person> is originally from <birthplace>.",
+    "<This person> was born in <birthplace>."
+  ],
+  "complicated_paraphrases": [
+    "It was in <birthplace> where <This person> was born.",
+    "The life of <This person-o> commenced in <birthplace>.",
+    "<This person> entered into existence at the <birthplace>.",
+    "<This person>'s origin can be traced to their birth in <birthplace>.",
+    "<birthplace> is where <This person> took their first breath, marking the start of their journey.",
+    "<This person>'s life story had its humble beginning in <birthplace>.",
+    "The origin of <This person>'s life is situated in <birthplace>.",
+    "From the city of <birthplace>, <This person> entered the world."
+  ]
+}
