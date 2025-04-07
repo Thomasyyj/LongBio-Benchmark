@@ -4,20 +4,20 @@ LongBio benchmark generate a coherent context and comprehensive questions to eva
 
 |                                  |   Understanding |   Reasoning |   Trustworthy |    avg |   rank |
 |:---------------------------------|----------------:|------------:|--------------:|-------:|-------:|
-| Qwen2.5-14B-Instruct-1M          |            90.8 |        47.6 |          63.8 | 67.400 |      1 |
-| Qwen2.5-7B-Instruct-1M           |            86.2 |        34.9 |          71.8 | 64.300 |      2 |
-| internlm3-8b-instruct            |            68.3 |        28.6 |          65.4 | 54.100 |      3 |
-| glm-4-9b-chat-1m                 |            54.9 |        33.2 |          55.2 | 47.767 |      4 |
-| Llama-3-8B-ProLong-512k-Instruct |            45.4 |        30.0 |          62.2 | 45.867 |      5 |
-| Llama-3.1-8B-Instruct            |            50.3 |        17.9 |          59.0 | 42.400 |      6 |
-| Llama-3.1-70B-Instruct           |            32.2 |        18.5 |          29.1 | 26.600 |      7 |
-| Qwen2.5-72B-Instruct             |            33.4 |        24.2 |           7.6 | 21.733 |      8 |
-| Phi-3.5-mini-instruct            |            25.3 |        10.2 |          21.9 | 19.133 |      9 |
-| Llama-3.2-3B-Instruct            |            13.1 |        13.9 |          16.2 | 14.400 |     10 |
-| Qwen2.5-7B-Instruct              |            15.5 |        13.0 |          14.6 | 14.367 |     11 |
-| Phi-3-medium-128k-instruct       |            16.9 |         8.4 |           1.8 |  9.033 |     12 |
-| Llama-3.2-1B-Instruct            |             3.0 |         9.0 |           4.4 |  5.467 |     13 |
-| Mistral-Nemo-Instruct-2407       |             2.5 |         7.0 |           0.0 |  3.167 |     14 |
+| Qwen2.5-14B-Instruct-1M          |            91.7 |        58.0 |          63.8 | 71.167 |      1 |
+| Qwen2.5-7B-Instruct-1M           |            87.1 |        34.9 |          71.8 | 64.600 |      2 |
+| internlm3-8b-instruct            |            68.6 |        28.6 |          65.4 | 54.200 |      3 |
+| glm-4-9b-chat-1m                 |            55.6 |        34.3 |          55.2 | 48.367 |      4 |
+| Llama-3-8B-ProLong-512k-Instruct |            45.8 |        31.7 |          62.2 | 46.567 |      5 |
+| Llama-3.1-8B-Instruct            |            50.5 |        16.8 |          59.0 | 42.100 |      6 |
+| Llama-3.1-70B-Instruct           |            32.2 |        17.6 |          29.1 | 26.300 |      7 |
+| Phi-3.5-mini-instruct            |            25.3 |        28.4 |          21.9 | 25.200 |      8 |
+| Qwen2.5-72B-Instruct             |            33.6 |        32.0 |           7.6 | 24.400 |      9 |
+| Qwen2.5-7B-Instruct              |            15.4 |        23.0 |          14.6 | 17.667 |     10 |
+| Llama-3.2-3B-Instruct            |            13.2 |        17.2 |          16.2 | 15.533 |     11 |
+| Llama-3.2-1B-Instruct            |             3.1 |        19.8 |           4.4 |  9.100 |     12 |
+| Phi-3-medium-128k-instruct       |            16.9 |         6.8 |           1.8 |  8.500 |     13 |
+| Mistral-Nemo-Instruct-2407       |             2.4 |         7.2 |           0.0 |  3.200 |     14 |
 
 We are continuously updating the results.
 

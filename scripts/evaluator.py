@@ -63,17 +63,15 @@ class GeneralEvaluator():
                 return 0
         else:
             # logger.info(f"Ref is not a string, but a list: {ref}. So we are in the multi-retrieval mode.")
-            matches = []
+            current_pos = 0
             for r in ref:
-                r = r.replace('(', r'\(').replace(')',r'\)')
-                match = re.search(r, pred, re.IGNORECASE)
-                if match:
-                    matches.append(match)
-            if len(matches) == len(ref):
-                # and the order is correct
-                if all(matches[i].start() < matches[i+1].start() for i in range(len(matches)-1)):
-                    return 1
-            return 0
+                pattern = re.escape(r)
+                match = re.search(pattern, pred[current_pos:], re.IGNORECASE)
+                if not match:
+                    return 0
+                # Update current_pos to the end of the current match relative to the full string.
+                current_pos += match.end()
+            return 1
     
     def extract_number(self, answer_string):
         if not isinstance(answer_string, str):
@@ -194,15 +192,13 @@ class CitationEvaluator(GeneralEvaluator):
                 return 0
             return 1
         else:
-            matches = []
+            # logger.info(f"Ref is not a string, but a list: {ref}. So we are in the multi-retrieval mode.")
+            current_pos = 0
             for r in ref:
-                r = r.replace('[', r'\[').replace(']',r'\]') #aviod regex of []
-                r = r.replace('(', r'\(').replace(')',r'\)')
-                match = re.search(r, pred, re.IGNORECASE)
-                if match:
-                    matches.append(match)
-            if len(matches) == len(ref):
-                # and the order is correct
-                if all(matches[i].start() < matches[i+1].start() for i in range(len(matches)-1)):
-                    return 1
-            return 0
+                pattern = re.escape(r)
+                match = re.search(pattern, pred[current_pos:], re.IGNORECASE)
+                if not match:
+                    return 0
+                # Update current_pos to the end of the current match relative to the full string.
+                current_pos += match.end()
+            return 1
