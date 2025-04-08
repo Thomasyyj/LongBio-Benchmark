@@ -41,7 +41,6 @@ reasoning_question_template = {
     'rank': "Rank the following people in order of age from the youngest to the oldest: {people_names}", 
     'calculation': "What’s the age difference between {people_names}?",
     # 'twodiff': "Which people have an age difference of {age_diffence}? I only need one set of answers."
-    # （Zeyu）the previous description seems a little bit vague
     'twodiff': "From the given profiles of these individuals, identify two individuals such that the age difference between them is {age_difference}. Only one pair of answers is needed."
 }
 
@@ -59,7 +58,6 @@ def read_list_from_txt(fpath):
 
 class TemplateProcessor():
     def __init__(self, template_path) -> None:
-        # TODO better automatically find this
         self.attribute_names = ['birthdate', 'birthplace', 'hobby', 'university', 'major', 'work_city']
 
         self.paraphrase_templates = {}
@@ -183,7 +181,8 @@ class Bio():
                 continue
             start_idx = len(descriptions)
             if ref_bio_name_and_attr and ref_bio_name_and_attr[1] == attribute:
-                sampled_template = f'The {attribute} of {self.full_names} is the same as {ref_bio_name_and_attr[0]}.'
+                attribute_ = attribute.replace("work_city", "work city")
+                sampled_template = f'The {attribute_} of {self.full_names} is the same as {ref_bio_name_and_attr[0]}.'
             else:
                 sampled_template = self.template_processor.get_template(attribute, rng, use_paraphrase)[0]
                 sampled_template = self.fill_people_name(sampled_template, use_pronoun)

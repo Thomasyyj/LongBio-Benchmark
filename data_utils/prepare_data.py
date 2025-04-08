@@ -66,7 +66,6 @@ class BioQABenchmarkGenerator:
             new_bio = Bio(**self.sample_attributes())
             if new_bio not in self.bios:
                 self.bios.append(new_bio)
-            # self.bios.append(Bio(**self.sample_attributes()))
         logger.info(f"Seed bios preparation finished")
         self.suffix = new_bio.suffix # We need to remove this suffix at the end of the context
         
@@ -101,7 +100,6 @@ class BioQABenchmarkGenerator:
         use_pronoun: bool = False,
         random_attr: bool = False,
     ):
-        # Done 这个任务中指定使用单独 / 最为明确的template，任何属性的陈述和question只有一种最明确的template
         assert self.num_retrieval == 1, "This function is only for single retrieval"
         assert self.apply_fewshot==False, "Not support few-shot for single retrieval"
         # Bio1 + ... + BioN + Q + A
@@ -116,8 +114,8 @@ class BioQABenchmarkGenerator:
         context, context_lengths = [], []
         context_length = 0
         n_bios = 0
-        rng = random.Random(self.random_seed) # yyj: move rng outside while to ensure the randomness
-        while True: # yyj: we need to check the length before concating the new context
+        rng = random.Random(self.random_seed) 
+        while True: # check the length before concating the new context
             b = random.choice(self.bios)
             if b != bio_q:
                 desc = b.to_description(
@@ -393,38 +391,6 @@ class BioQABenchmarkGenerator:
         
         return data_point
 
-    def multiple_retrieval_story_gen(self):
-        assert self.apply_fewshot==False, "Not support few-shot for story generation task"
-        bio_qs, attr_q = random.choices(self.bios, k=self.num_retrieval), random.choices(self.q_attributes, k=1)[0]
-        s_qs = [bio_q.to_question(attr_q)[0] for bio_q in bio_qs]
-        qs = [bio_q.to_question(attr_q)[1] for bio_q in bio_qs]
-        
-        context, question_list, context_length = self.get_context_questions_for_multiple_retrieval(attr_q, bio_qs, qs, s_qs, use_pronoun=False, use_paraphrase=False, use_age=False)
-        _, rationales, __, answers = self.prepare_multi_retrieval_questions(question_list, 'retrieval')
-        num_retrieval_per_demo = self.num_retrieval
-        questions = [bio_q.to_people_attr_only_description(attr_q) for bio_q in bio_qs]
-        questions_prefix = None
-        answers = [bio_q.to_sentance(attr_q) for bio_q in bio_qs]
-        data_point = {
-            "context": context,
-            "token_length": context_length,
-            "questions":{
-                "NLG": {
-                    "Question_prefix": questions_prefix,
-                    "Question": questions,
-                    "Rationale": None,
-                    "Answer": answers,
-                    "Property": "All",
-                    "position_in_list": [q["position_in_list"][0] for q in question_list],
-                    "position_in_bios": [q["position_in_bios"][0] for q in question_list],
-                    "reference": [q["reference"] for q in question_list]
-                }
-            }
-        }
-        
-        return data_point
-
-        
     def multiple_retrieval_paraphrase(self):
         return self.multiple_retrieval(use_pronoun=False, use_paraphrase=True)
     
@@ -681,5 +647,4 @@ if __name__ == "__main__":
     )
 
     benchmark.generate(args.num_data)
-    # print(benchmark.dataset[0])
     benchmark.to_json(args.data_output_folder)
