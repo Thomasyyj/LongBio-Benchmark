@@ -113,15 +113,12 @@ The tasks to be evaluated on are divided in to three categories: Understanding, 
 | idk      | The upgrade of the standard version, where the correct answer is deleted. The model should output "The answer is not explicitly stated" when the answer is deleted and answer the correct answer when the answer is given | n_retrieval=<br />1;<br />Zero-shot  | Answer Accuracy;<br />Refuse Accracy<br />All-Accracy | Attribute: Below is the bio of {P1}. ... (delete the expression of hobby)<br />Question: What's the hobby of {P1}? |
 
 ## Citation
-Thanks for reading. To cite this paper:
 ```
 @misc{longbio2025,
-  author = {Zeyu Huang, Yijun Yang, Wenhao Zhu, Zihan Qiu},
   title = {LongBio-Benchmark: A Controlled Benchmark for Long-Context Language Models},
   year = {2025},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Thomasyyj/LongBio-Benchmark}},
 }
-
 ```
