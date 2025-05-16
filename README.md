@@ -113,13 +113,3 @@ The tasks to be evaluated on are divided in to three categories: Understanding, 
 | -------- | ------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------ |
 | citation | The upgrade of the multi_standard version, where the model is asked to give the answer as well as the citation of this answer. | n_retrieval=<br />1,2;<br />Two-shot | Answer Accuracy;<br />Citation Accuracy               | Attribute: Bio [1]: ... {P1} was born in Santa Paula.<br />Question: Which university did Isabel Winston Nolan graduate from? |
 | idk      | The upgrade of the standard version, where the correct answer is deleted. The model should output "The answer is not explicitly stated" when the answer is deleted and answer the correct answer when the answer is given | n_retrieval=<br />1;<br />Zero-shot  | Answer Accuracy;<br />Refuse Accracy<br />All-Accracy | Attribute: Below is the bio of {P1}. ... (delete the expression of hobby)<br />Question: What's the hobby of {P1}? |
-
-## Citation
-```
-@misc{longbio2025,
-  title = {LongBio-Benchmark: A Controlled Benchmark for Long-Context Language Models},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-}
-```
