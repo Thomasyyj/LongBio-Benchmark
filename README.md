@@ -121,6 +121,5 @@ The tasks to be evaluated on are divided in to three categories: Understanding, 
   year = {2025},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/Thomasyyj/LongBio-Benchmark}},
 }
 ```
