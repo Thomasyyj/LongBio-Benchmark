@@ -1,5 +1,15 @@
 # LongBio Benchmark: A controlled benchmark for Long-Context Language Models
 
+<p align="center">
+    <a href="https://arxiv.org/abs/2506.02921" target="_blank" rel="noopener noreferrer">
+        <img alt="paper" src="https://img.shields.io/badge/paper-paper?logo=arxiv&logoColor=%23B31B1B&labelColor=white&color=%23B31B1B">
+    </a>
+</p>
+
+(We are keeping refactoring our code bases to make it more convenient for use. Please feel free to raise any suggestions on the issue page.)
+
+---
+
 LongBio benchmark generate a coherent context and comprehensive questions to evaluate long-conotext language models with controlled configuations and tasks with increasing difficulty levels. For context, we allowed several controllable features (context length, distractor density, the number of answer information and their position) while ensuring the coherance of texts. For questions, we design 15 tasks covering the the capbilities of 1\) understanding, 2\) reasoning and 3\) trustworthy generations of LLMs and make the sub-task hierarchical to positional the level of each LLMs. Here are the main results. 
 
 |           128k                   |   Understanding |   Reasoning |   Trustworthy |    avg |   rank |
@@ -116,10 +126,13 @@ The tasks to be evaluated on are divided in to three categories: Understanding, 
 
 ## Citation
 ```
-@misc{longbio2025,
-  title = {LongBio-Benchmark: A Controlled Benchmark for Long-Context Language Models},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
+@misc{yang2025controllableexaminationlongcontextlanguage,
+      title={A Controllable Examination for Long-Context Language Models}, 
+      author={Yijun Yang and Zeyu Huang and Wenhao Zhu and Zihan Qiu and Fei Yuan and Jeff Z. Pan and Ivan Titov},
+      year={2025},
+      eprint={2506.02921},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.02921}, 
 }
 ```
