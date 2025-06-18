@@ -76,11 +76,11 @@ bash scripts/submit_scripts/prepare_data.sh
 If you want, you can modify the model family of the tokenizer for creating the data in the shell file. The default tokenizer is Qwen2.5-7B.
 
 ## Run experiments
-To run the experiments (e.g calculation task) on a specific model, 
+To launch the experiments for all tasks on a specific model, 
 ```
 export MODEL_NAME="folder/name/of/model" # the folder name of the model you want to use under MODEL_PATH 
 export TOKENIZER_NAME="Qwen2.5-7B" # should be the same as the name you use when constructing the data 
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 bash scripts/submit_scripts/task_qwen/calculation.sh # You must specify the available gpu devices
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 bash scripts/submit_scripts/run_all_task.sh 8 run_id # assume 8 data parallel here
 ```
 
 ## Results

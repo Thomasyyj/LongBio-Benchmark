@@ -1,36 +1,40 @@
-MODEL_PATH="/cpfs01/shared/XNLP_H800/hf_hub/Qwen2.5-14B-1M-Instruct"
-EVAL_MODEL_PATH="/cpfs01/shared/XNLP_H800/hf_hub/Qwen2.5-14B-Instruct-1M"
-DATA_PATH="/cpfs01/shared/XNLP_H800/zeyuhuang/longcontext/data/bios"
-SAVE_PATH="/cpfs01/shared/XNLP_H800/zeyuhuang/longcontext/inference_results/1106"
-model="Qwen2.5-14B-1M-Instruct"
-tokenizer_model="Qwen2.5-7B-1M-Instruct"
+# export three env variables: HOME, MODEL_PATH, MODEL_NAME, TOKENIZER_NAME
+# check if dp and run_id are passed
+if [ $# -lt 2 ]; then
+    echo "dp and run_id parameters should be passed"
+    echo "example: $0 8 qwen_7b"
+    exit 1
+fi
 
-IFS=',' read -r -a devices <<< "$CUDA_VISIBLE_DEVICES"
+dp="$1"
+run_id="$2"
 
+MODEL_PATH="${MODEL_PATH}/${MODEL_NAME}"
+DATA_PATH="${HOME}/data/bios"
+SAVE_PATH="${HOME}/inference_results/${run_id}"
+LOG_PATH="../logs/exp_logs"
+model=${MODEL_NAME}
+tokenizer_model=${TOKENIZER_NAME}
 n_gpu=$(echo $CUDA_VISIBLE_DEVICES | tr ',' ' ' | wc -w)
-
-# Start the server
-CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES PYTHONPATH="." python scripts/start_vllm_server.py \
-    -m ${MODEL_PATH}\
-    -ng $n_gpu > logs/server_${model}.log 2>&1 &
-SERVICE_PID1=$!
-echo "Server1_pid: $SERVICE_PID1"
-
-sleep 180
 
 position="0_100"
 density="1.0"
-skills=("storygen")
-context_lengths=(2 8 16 32 64)
-n_retrievals=(2 5 10)
+context_lengths=(2 8 16 32)
+n_retrievals=(1)
+skills=("pronoun")
 for context_length in "${context_lengths[@]}"; do
-    batch_size=$((128*${n_gpu}/${context_length}))
-    e_batch_size=$((128/${batch_size}))
+    batch_size=$((256*${n_gpu}/${context_length}))
+    if [ "$batch_size" -gt 64 ]; then
+        e_batch_size=1
+    else
+        e_batch_size=$((64 /${batch_size}))
+    fi
     for n_retrieval in "${n_retrievals[@]}"; do
         for skill in "${skills[@]}"; do
             mkdir -p "${SAVE_PATH}/${model}_${context_length}k_${n_retrieval}_retrieval_density_${density}_position_${position}_${skill}"
             CUDA_VISIBLE_DEVICES=$(echo $CUDA_VISIBLE_DEVICES | tr ' ' ',') PYTHONPATH="." python scripts/inference.py \
-                -db \
+                -af \
+                -dp ${dp}\
                 -bs $batch_size \
                 -eb $e_batch_size \
                 -m ${MODEL_PATH} \
@@ -41,5 +45,4 @@ for context_length in "${context_lengths[@]}"; do
     done
 done
 
-pkill -P $SERVICE_PID1
-pkill -P $SERVICE_PID2
+echo "Pronoun tasks finished."
