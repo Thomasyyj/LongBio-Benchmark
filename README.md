@@ -75,6 +75,8 @@ bash scripts/submit_scripts/prepare_data.sh
 ```
 If you want, you can modify the model family of the tokenizer for creating the data in the shell file. The default tokenizer is Qwen2.5-7B.
 
+We also provide a sample dataset using Qwen2.5-7B as a tokenizer on [Huggingface](https://huggingface.co/datasets/thomasyyj/LongBioBench_Sample)
+
 ## Run experiments
 To launch the experiments for all tasks on a specific model, 
 ```
