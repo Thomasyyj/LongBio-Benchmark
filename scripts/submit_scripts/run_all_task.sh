@@ -25,7 +25,7 @@ SERVICE_PID=$!
 echo "Server_pid: $SERVICE_PID"
 sleep 180
 
-tasks=("standard" "rank" "pronoun" "paraphrase" "multihop" "IDK" "cite" "calculation" "twodiff")
+tasks=("standard_0shot" "rank_2shot" "pronoun_0shot" "paraphrase_0shot" "multihop_2shot" "IDK_0shot" "cite_2shot" "calculation_0shot" "twodiff_2shot")
 
 for task in "${tasks[@]}"; do
     CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES bash scripts/submit_scripts/tasks/${task}.sh ${dp} ${run_id}
