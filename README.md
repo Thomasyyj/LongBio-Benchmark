@@ -6,10 +6,10 @@
     </a>
 </p>
 
-(We are keeping refactoring our code bases to make it more convenient for use. Please feel free to raise any suggestions on the issue page.)
-
 ---
-
+## 🔥Updates:
+📢 [09-18-2025] The LongBioBench has been accepted at [NeurIPS 2025](https://neurips.cc/) as a **Spotlight** paper!
+## 
 LongBio benchmark generate a coherent context and comprehensive questions to evaluate long-conotext language models with controlled configuations and tasks with increasing difficulty levels. For context, we allowed several controllable features (context length, distractor density, the number of answer information and their position) while ensuring the coherance of texts. For questions, we design 15 tasks covering the the capbilities of 1\) understanding, 2\) reasoning and 3\) trustworthy generations of LLMs and make the sub-task hierarchical to positional the level of each LLMs. Here are the main results. 
 
 |           128k                   |   Understanding |   Reasoning |   Trustworthy |    avg |   rank |
